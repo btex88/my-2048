@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ARROW from '../images/symbols/arrow.png';
+import ARROW from '../images/symbols/back-arrow.png';
 
 export default function ReturnButton() {
   const navigate = useNavigate();
@@ -25,7 +25,6 @@ export default function ReturnButton() {
           src={ARROW}
           alt="arrow"
           className="h-16 object-contain"
-          style={{ transform: 'scale(-1, 1)' }}
         />
       </button>
     </div>

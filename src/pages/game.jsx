@@ -1,8 +1,14 @@
-// import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import GameBoard from '../components/game-board';
+import GameControls from '../components/game-controls';
+import GameHeader from '../components/game-header';
 
 export default function Game() {
-  const location = useLocation();
-  console.log(location);
-  return ('');
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-between">
+      <GameHeader />
+      <GameBoard />
+      <GameControls />
+    </div>
+  );
 }
