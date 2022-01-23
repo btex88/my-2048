@@ -1,10 +1,10 @@
 import React from 'react';
-import TWO from '../images/two.png';
-import FOUR from '../images/four.png';
-import ZERO from '../images/zero.png';
-import EIGHT from '../images/eight.png';
-import M from '../images/m.png';
-import Y from '../images/y.png';
+import TWO from '../images/numbers/two.png';
+import FOUR from '../images/numbers/four.png';
+import ZERO from '../images/numbers/zero.png';
+import EIGHT from '../images/numbers/eight.png';
+import M from '../images/letters/m.png';
+import Y from '../images/letters/y.png';
 
 export default function Title() {
   return (
