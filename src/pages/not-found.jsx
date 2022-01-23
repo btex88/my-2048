@@ -1,6 +1,6 @@
 import React from 'react';
-import NotFound404 from '../components/not-found-404';
-import NotFoundText from '../components/not-found-text';
+import NotFoundCode from '../components/not-found-code';
+import NotFoundTitle from '../components/not-found-title';
 import ReturnButton from '../components/return-button';
 
 export default function NotFound() {
@@ -10,8 +10,8 @@ export default function NotFound() {
         <ReturnButton />
       </div>
       <div className="h-full w-full flex flex-col items-center justify-center">
-        <NotFound404 />
-        <NotFoundText />
+        <NotFoundCode />
+        <NotFoundTitle />
       </div>
     </div>
   );

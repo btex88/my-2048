@@ -6,7 +6,7 @@ import EIGHT from '../images/numbers/eight.png';
 import M from '../images/letters/m.png';
 import Y from '../images/letters/y.png';
 
-export default function Title() {
+export default function LoginTitle() {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-evenly">
       <div className="w-full h-auto flex flex-row items-center justify-center my-2">

@@ -6,7 +6,7 @@ import F from '../images/letters/f.png';
 import U from '../images/letters/u.png';
 import D from '../images/letters/d.png';
 
-export default function NotFundText() {
+export default function NotFoundTitle() {
   return (
     <div className="w-full h-40 flex flex-col items-center justify-evenly">
       <div className="w-full h-auto flex items-center justify-center">
