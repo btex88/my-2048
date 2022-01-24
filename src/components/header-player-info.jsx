@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import HeaderPlayerLabel from './header-player-label';
+import capitalize from '../services/capitalize';
 
 export default function HeaderPlayerInfo() {
   const location = useLocation();
@@ -12,7 +13,7 @@ export default function HeaderPlayerInfo() {
         className="font-bold text-2xl text-center leading-5 tracking-wide truncate"
         style={{ fontFamily: '\'Cabin Sketch\', sans-serif' }}
       >
-        {playerName}
+        {capitalize(playerName)}
       </span>
     </div>
   );

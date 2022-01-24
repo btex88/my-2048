@@ -2,22 +2,25 @@ import React, { useContext, useEffect } from 'react';
 import randomId from '../services/random-id';
 import initValues from '../services/init-values';
 import GameContext from '../context/game/game-context';
+import swipeRight from '../services/swipe-right';
 
 export default function GameBoard() {
-  const { setCurrentBoard } = useContext(GameContext);
-  const board = initValues().reduce((acc, value, index) => {
-    acc.push({ value, index });
-    return acc;
-  }, []);
+  const { currentBoard, setCurrentBoard } = useContext(GameContext);
 
-  useEffect(() => setCurrentBoard(board), []);
+  useEffect(() => {
+    const board = initValues().reduce((acc, value, index) => {
+      acc.push({ value, index });
+      return acc;
+    }, []);
+    setCurrentBoard(board);
+  }, []);
 
   return (
     <div
       className="w-72 h-auto py-1 flex flex-row flex-wrap justify-evenly items-start
       bg-orange-800 rounded"
     >
-      {board.map(({ value }) => (
+      {currentBoard.map(({ value }) => (
         <div
           key={randomId()}
           className="border-black my-0.5 w-16 h-16 flex items-center justify-center
