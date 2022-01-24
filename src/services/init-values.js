@@ -1,4 +1,4 @@
-const initValues = () => {
+function initValues() {
   const arr = Array(16).fill(0);
   const rand = {
     one: Math.floor(Math.random() * arr.length),
@@ -16,12 +16,12 @@ const initValues = () => {
     }
     return acc;
   }, []);
-  return newArr.reduce((accum, val, ind) => {
+  return newArr.reduce((accum, _val, ind) => {
     if (ind % 4 === 0) {
       accum.push([newArr[ind], newArr[ind + 1], newArr[ind + 2], newArr[ind + 3]]);
     }
     return accum;
   }, []);
-};
+}
 
 export default initValues;

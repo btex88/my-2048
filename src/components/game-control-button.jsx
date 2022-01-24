@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ARROW from '../images/symbols/round-arrow.png';
 import GameContext from '../context/game/game-context';
-import { swipeLeft, swipeRight } from '../services/swipes';
+import swipe from '../services/swipe';
+import sumValues from '../services/sum-values';
 
 export default function GameControlButton({ direction }) {
   const { currentBoard, setCurrentBoard } = useContext(GameContext);
@@ -23,8 +24,10 @@ export default function GameControlButton({ direction }) {
   }
 
   function handleClick(value) {
-    if (value === 'left') setCurrentBoard(swipeLeft(currentBoard));
-    if (value === 'right') setCurrentBoard(swipeRight(currentBoard));
+    if (value === 'left') setCurrentBoard(swipe(currentBoard, 'left'));
+    if (value === 'right') {
+      setCurrentBoard(sumValues(swipe(currentBoard, 'right'), 'right'));
+    }
   }
 
   return (
