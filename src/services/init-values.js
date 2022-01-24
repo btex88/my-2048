@@ -4,7 +4,7 @@ const initValues = () => {
     one: Math.floor(Math.random() * arr.length),
     two: Math.floor(Math.random() * arr.length),
   };
-  return arr.reduce((acc, curr, index) => {
+  const newArr = arr.reduce((acc, curr, index) => {
     while (rand.one === rand.two) {
       rand.two = Math.floor(Math.random() * arr.length);
       if (rand.one !== rand.two) break;
@@ -15,6 +15,12 @@ const initValues = () => {
       acc.push(curr);
     }
     return acc;
+  }, []);
+  return newArr.reduce((accum, val, ind) => {
+    if (ind % 4 === 0) {
+      accum.push([newArr[ind], newArr[ind + 1], newArr[ind + 2], newArr[ind + 3]]);
+    }
+    return accum;
   }, []);
 };
 

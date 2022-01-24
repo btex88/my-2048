@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ARROW from '../images/symbols/round-arrow.png';
+import GameContext from '../context/game/game-context';
+import { swipeLeft, swipeRight } from '../services/swipes';
 
 export default function GameControlButton({ direction }) {
+  const { currentBoard, setCurrentBoard } = useContext(GameContext);
+
   function handleArrowDirection() {
     switch (direction) {
       case 'left':
@@ -17,11 +21,18 @@ export default function GameControlButton({ direction }) {
         return {};
     }
   }
+
+  function handleClick(value) {
+    if (value === 'left') setCurrentBoard(swipeLeft(currentBoard));
+    if (value === 'right') setCurrentBoard(swipeRight(currentBoard));
+  }
+
   return (
     <div className="w-auto h-auto">
       <button
         type="button"
         className="w-auto h-auto"
+        onClick={() => handleClick(direction)}
       >
         <img
           src={ARROW}
