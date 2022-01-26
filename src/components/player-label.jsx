@@ -1,11 +1,11 @@
 import React from 'react';
-import P from '../images/letters/p.png';
-import L from '../images/letters/l.png';
-import A from '../images/letters/a.png';
-import Y from '../images/letters/y.png';
-import E from '../images/letters/e.png';
-import R from '../images/letters/r.png';
-import DOT from '../images/symbols/circle.png';
+import P from '../assets/images/letters/p.png';
+import L from '../assets/images/letters/l.png';
+import A from '../assets/images/letters/a.png';
+import Y from '../assets/images/letters/y.png';
+import E from '../assets/images/letters/e.png';
+import R from '../assets/images/letters/r.png';
+import DOT from '../assets/images/symbols/circle.png';
 
 export default function PlayerLabel() {
   return (

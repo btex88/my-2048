@@ -1,10 +1,10 @@
 import React from 'react';
-import TWO from '../images/numbers/two.png';
-import FOUR from '../images/numbers/four.png';
-import ZERO from '../images/numbers/zero.png';
-import EIGHT from '../images/numbers/eight.png';
-import M from '../images/letters/m.png';
-import Y from '../images/letters/y.png';
+import TWO from '../assets/images/numbers/two.png';
+import FOUR from '../assets/images/numbers/four.png';
+import ZERO from '../assets/images/numbers/zero.png';
+import EIGHT from '../assets/images/numbers/eight.png';
+import M from '../assets/images/letters/m.png';
+import Y from '../assets/images/letters/y.png';
 
 export default function LoginTitle() {
   return (

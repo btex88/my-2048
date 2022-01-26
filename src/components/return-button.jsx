@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ARROW from '../images/symbols/back-arrow.png';
+import ARROW from '../assets/images/symbols/back-arrow.png';
 
 export default function ReturnButton() {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React from 'react';
-import FOUR from '../images/numbers/four.png';
-import ZERO from '../images/numbers/zero.png';
+import FOUR from '../assets/images/numbers/four.png';
+import ZERO from '../assets/images/numbers/zero.png';
 
 export default function NotFoundCode() {
   return (

@@ -19,6 +19,7 @@ export function sumLeft(arr) {
     const newRow = row.reduce((coll, curr, index) => {
       if (curr === row[index + 1] && index < 3) {
         coll.push((curr + row[index + 1]));
+        row.splice((index - 1), 1, '');
       } else {
         coll.push(curr);
       }

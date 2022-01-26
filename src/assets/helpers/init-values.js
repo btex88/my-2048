@@ -1,4 +1,4 @@
-function initValues() {
+export default function initValues() {
   const arr = Array(16).fill('');
   const rand = {
     one: Math.floor(Math.random() * arr.length),
@@ -23,5 +23,3 @@ function initValues() {
     return accum;
   }, []);
 }
-
-export default initValues;

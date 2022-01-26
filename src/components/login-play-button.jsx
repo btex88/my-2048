@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoginContext from '../context/login/login-context';
-import P from '../images/letters/p.png';
-import L from '../images/letters/l.png';
-import A from '../images/letters/a.png';
-import Y from '../images/letters/y.png';
+import P from '../assets/images/letters/p.png';
+import L from '../assets/images/letters/l.png';
+import A from '../assets/images/letters/a.png';
+import Y from '../assets/images/letters/y.png';
 
 export default function LoginPlayButton() {
   const { buttonDisabled, playerName } = useContext(LoginContext);

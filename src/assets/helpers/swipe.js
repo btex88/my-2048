@@ -1,4 +1,4 @@
-function swipe(arr, direction) {
+export default function swipe(arr, direction) {
   const modArr = arr.flat(2);
   const newArr = modArr.reduce((acc, _curr, ind) => {
     if (ind % 4 === 0) {
@@ -25,5 +25,3 @@ function swipe(arr, direction) {
   }
   return arr;
 }
-
-export default swipe;

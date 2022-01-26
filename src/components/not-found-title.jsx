@@ -1,10 +1,10 @@
 import React from 'react';
-import N from '../images/letters/n.png';
-import O from '../images/letters/o.png';
-import T from '../images/letters/t.png';
-import F from '../images/letters/f.png';
-import U from '../images/letters/u.png';
-import D from '../images/letters/d.png';
+import N from '../assets/images/letters/n.png';
+import O from '../assets/images/letters/o.png';
+import T from '../assets/images/letters/t.png';
+import F from '../assets/images/letters/f.png';
+import U from '../assets/images/letters/u.png';
+import D from '../assets/images/letters/d.png';
 
 export default function NotFoundTitle() {
   return (

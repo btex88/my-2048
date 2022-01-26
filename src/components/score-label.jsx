@@ -1,10 +1,10 @@
 import React from 'react';
-import S from '../images/letters/s.png';
-import C from '../images/letters/c.png';
-import O from '../images/letters/o.png';
-import R from '../images/letters/r.png';
-import E from '../images/letters/e.png';
-import DOT from '../images/symbols/circle.png';
+import S from '../assets/images/letters/s.png';
+import C from '../assets/images/letters/c.png';
+import O from '../assets/images/letters/o.png';
+import R from '../assets/images/letters/r.png';
+import E from '../assets/images/letters/e.png';
+import DOT from '../assets/images/symbols/circle.png';
 
 export default function ScoreLabel() {
   return (

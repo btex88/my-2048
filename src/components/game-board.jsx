@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import randomId from '../services/random-id';
-import initValues from '../services/init-values';
+import randomId from '../assets/helpers/random-id';
+import initValues from '../assets/helpers/init-values';
 import GameContext from '../context/game/game-context';
 import GameControlButton from './game-control-button';
 
