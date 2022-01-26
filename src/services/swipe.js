@@ -6,19 +6,20 @@ function swipe(arr, direction) {
     }
     return acc;
   }, []);
-
   const filteredArr = newArr.map((row) => row.filter((num) => num));
   const emptyArr = filteredArr.reduce((accum, curr) => {
     accum.push(4 - Number(curr.length));
     return accum;
   }, []);
   const zerosArr = emptyArr.reduce((gather, value) => {
-    gather.push(Array(value).fill(0));
+    gather.push(Array(value).fill(''));
     return gather;
   }, []);
+
   if (direction === 'left') {
     return zerosArr.map((val, ind) => ([...filteredArr[ind], ...val]));
   }
+
   if (direction === 'right') {
     return zerosArr.map((val, ind) => [...val, ...filteredArr[ind]]);
   }

@@ -9,27 +9,16 @@ export default function GameControlButton({ direction }) {
   const { currentBoard, setCurrentBoard } = useContext(GameContext);
 
   function handleArrowDirection() {
-    switch (direction) {
-      case 'left':
-        return { transform: 'rotate(0deg)' };
-      case 'right':
-        return { transform: 'rotate(180deg)' };
-      case 'up':
-        return { transform: 'rotate(90deg)' };
-      case 'down':
-        return { transform: 'rotate(270deg)' };
-      default:
-        return {};
-    }
+    if (direction === 'left') return { transform: 'rotate(0deg)' };
+    if (direction === 'right') return { transform: 'rotate(180deg)' };
+    if (direction === 'up') return { transform: 'rotate(90deg)' };
+    if (direction === 'down') return { transform: 'rotate(270deg)' };
+    return {};
   }
 
   function handleClick(value) {
-    if (value === 'left') {
-      setCurrentBoard(sumLeft(swipe(currentBoard, 'left'), 'left'));
-    }
-    if (value === 'right') {
-      setCurrentBoard(sumRight(swipe(currentBoard, 'right'), 'right'));
-    }
+    if (value === 'left') setCurrentBoard(sumLeft(swipe(currentBoard, 'left')));
+    if (value === 'right') setCurrentBoard(sumRight(swipe(currentBoard, 'right')));
   }
 
   return (

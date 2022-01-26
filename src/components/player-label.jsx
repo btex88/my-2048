@@ -7,7 +7,7 @@ import E from '../images/letters/e.png';
 import R from '../images/letters/r.png';
 import DOT from '../images/symbols/circle.png';
 
-export default function HeaderPlayerLabel() {
+export default function PlayerLabel() {
   return (
     <div className="w-auto h-full flex flex-row flex-nowrap items-center justify-center">
       <img

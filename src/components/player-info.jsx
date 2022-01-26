@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import HeaderPlayerLabel from './header-player-label';
+import PlayerLabel from './player-label';
 import capitalize from '../services/capitalize';
 
-export default function HeaderPlayerInfo() {
+export default function PlayerInfo() {
   const location = useLocation();
   const { playerName } = location.state;
   return (
     <div className="w-auto h-1/2 flex flex-row flex-nowrap items-center justify-center">
-      <HeaderPlayerLabel />
+      <PlayerLabel />
       <span
         className="font-bold text-2xl text-center leading-5 tracking-wide truncate"
         style={{ fontFamily: '\'Cabin Sketch\', sans-serif' }}

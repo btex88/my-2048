@@ -1,40 +1,30 @@
-export function sumRight(arr, direction) {
+export function sumRight(arr) {
   return arr.reduce((acc, row) => {
-    const newRow = row.reduce((accum, value, index) => {
-      if (direction === 'right' && value === row[index - 1]) {
-        accum.push((value + row[index - 1]));
-        accum.splice((index - 1), 1, 0);
+    const newRow = row.reduce((coll, curr, index) => {
+      if (curr === row[index - 1]) {
+        coll.push((curr + row[index - 1]));
+        coll.splice((index - 1), 1, '');
       } else {
-        accum.push(value);
+        coll.push(curr);
       }
-      return accum;
+      return coll;
     }, []);
     acc.push(newRow);
     return acc;
   }, []);
 }
 
-export function sumLeft(arr, direction) {
+export function sumLeft(arr) {
   return arr.reduce((acc, row) => {
-    const newRow = row.reduce((accum, value, index) => {
-      if (direction === 'left' && value === row[index + 1]) {
-        accum.push((value + row[index + 1]));
-        accum.splice(index + 1, 1, 0);
+    const newRow = row.reduce((coll, curr, index) => {
+      if (curr === row[index + 1] && index < 3) {
+        coll.push((curr + row[index + 1]));
       } else {
-        accum.push(value);
+        coll.push(curr);
       }
-      return accum;
+      return coll;
     }, []);
     acc.push(newRow);
     return acc;
   }, []);
 }
-
-/*
-if (direction === 'left' && value === row[index + 1]) {
-        accum.push((value + row[index + 1]));
-        accum.splice((index + 1), 1, 0);
-      } else {
-        accum.push(value);
-      }
-*/

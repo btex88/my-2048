@@ -1,5 +1,5 @@
 function initValues() {
-  const arr = Array(16).fill(0);
+  const arr = Array(16).fill('');
   const rand = {
     one: Math.floor(Math.random() * arr.length),
     two: Math.floor(Math.random() * arr.length),
