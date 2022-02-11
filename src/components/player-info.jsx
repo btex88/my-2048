@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import PlayerLabel from './player-label';
-import capitalize from '../services/capitalize';
+import capitalize from '../assets/helpers/capitalize';
 
 export default function PlayerInfo() {
   const location = useLocation();

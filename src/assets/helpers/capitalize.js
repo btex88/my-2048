@@ -1,4 +1,4 @@
-function capitalize(name) {
+export default function capitalize(name) {
   const nameArr = name.split(' ');
   return nameArr.reduce((acc, curr) => {
     const newCurr = curr.split('')[0].toUpperCase() + curr.slice(1).toLowerCase();
@@ -6,5 +6,3 @@ function capitalize(name) {
     return acc;
   }, []).join(' ');
 }
-
-export default capitalize;
