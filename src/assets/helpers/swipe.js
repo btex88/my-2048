@@ -6,11 +6,14 @@ export default function swipe(arr, direction) {
     }
     return acc;
   }, []);
+
   const filteredArr = newArr.map((row) => row.filter((num) => num));
+
   const emptyArr = filteredArr.reduce((accum, curr) => {
     accum.push(4 - Number(curr.length));
     return accum;
   }, []);
+
   const zerosArr = emptyArr.reduce((gather, value) => {
     gather.push(Array(value).fill(''));
     return gather;
