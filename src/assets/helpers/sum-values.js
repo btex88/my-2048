@@ -1,9 +1,9 @@
 export function sumRight(arr) {
   return arr.reduce((acc, row) => {
     const newRow = row.reduce((coll, curr, index) => {
-      if (curr === row[index - 1]) {
-        coll.push(curr * 2);
-        coll.splice(index - 1, 1, '');
+      if (curr === row[index + 1]) {
+        coll.push('');
+        row.splice(index + 1, 1, (curr * 2));
       } else {
         coll.push(curr);
       }
