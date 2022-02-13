@@ -21,10 +21,34 @@ export default function GameControlButton({ direction }) {
   }
 
   function handleClick(value) {
-    if (value === 'right') setCurrentBoard(generateNum(sumRight(swipeX(currentBoard, 'right'))));
-    if (value === 'left') setCurrentBoard(generateNum(sumLeft(swipeX(currentBoard, 'left'))));
-    if (value === 'down') setCurrentBoard(generateNum(sumDown(swipeY(currentBoard, 'down'))));
-    if (value === 'up') setCurrentBoard(generateNum(sumUp(swipeY(currentBoard, 'up'))));
+    if (value === 'right') {
+      const firstSwipe = swipeX(currentBoard, 'right');
+      const sumValues = sumRight(firstSwipe);
+      const secondSwipe = swipeX(sumValues, 'right');
+      const newNumber = generateNum(secondSwipe);
+      setCurrentBoard(newNumber);
+    }
+    if (value === 'left') {
+      const firstSwipe = swipeX(currentBoard, 'left');
+      const sumValues = sumLeft(firstSwipe);
+      const secondSwipe = swipeX(sumValues, 'left');
+      const newNumber = generateNum(secondSwipe);
+      setCurrentBoard(newNumber);
+    }
+    if (value === 'down') {
+      const firstSwipe = swipeY(currentBoard, 'down');
+      const sumValues = sumDown(firstSwipe);
+      const secondSwipe = swipeY(sumValues, 'down');
+      const newNumber = generateNum(secondSwipe);
+      setCurrentBoard(newNumber);
+    }
+    if (value === 'up') {
+      const firstSwipe = swipeY(currentBoard, 'up');
+      const sumValues = sumUp(firstSwipe);
+      const secondSwipe = swipeY(sumValues, 'up');
+      const newNumber = generateNum(secondSwipe);
+      setCurrentBoard(newNumber);
+    }
   }
 
   return (

@@ -10,7 +10,9 @@ export default function LoginPlayButton() {
   const { buttonDisabled, playerName } = useContext(LoginContext);
   const navigate = useNavigate();
 
-  const handleButtonClick = () => navigate('/game', { state: { playerName } });
+  function handleButtonClick() {
+    navigate('/game', { state: { playerName } });
+  }
 
   return (
     <button
