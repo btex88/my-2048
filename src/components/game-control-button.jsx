@@ -7,6 +7,7 @@ import {
   sumRight, sumLeft, sumDown, sumUp,
 } from '../assets/helpers/sum-values';
 import swipeY from '../assets/helpers/swipe-y';
+import generateNum from '../assets/helpers/generate-num';
 
 export default function GameControlButton({ direction }) {
   const { currentBoard, setCurrentBoard } = useContext(GameContext);
@@ -20,10 +21,10 @@ export default function GameControlButton({ direction }) {
   }
 
   function handleClick(value) {
-    if (value === 'right') setCurrentBoard(sumRight(swipeX(currentBoard, 'right')));
-    if (value === 'left') setCurrentBoard(sumLeft(swipeX(currentBoard, 'left')));
-    if (value === 'down') setCurrentBoard(sumDown(swipeY(currentBoard, 'down')));
-    if (value === 'up') setCurrentBoard(sumUp(swipeY(currentBoard, 'up')));
+    if (value === 'right') setCurrentBoard(generateNum(sumRight(swipeX(currentBoard, 'right'))));
+    if (value === 'left') setCurrentBoard(generateNum(sumLeft(swipeX(currentBoard, 'left'))));
+    if (value === 'down') setCurrentBoard(generateNum(sumDown(swipeY(currentBoard, 'down'))));
+    if (value === 'up') setCurrentBoard(generateNum(sumUp(swipeY(currentBoard, 'up'))));
   }
 
   return (
