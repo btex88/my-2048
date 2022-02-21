@@ -12,6 +12,15 @@ export default function GameBoard() {
     setCurrentBoard(board);
   }, []);
 
+  useEffect(() => {
+    function verifyBoard() {
+      const board = [...currentBoard].flat(2);
+      if (board.every((num) => num !== '')) alert('Full board');
+      if (board.includes(16)) alert('You won!');
+    }
+    verifyBoard();
+  }, [currentBoard]);
+
   return (
     <div className="w-full h-full flex flex-col items-center justify-between">
       <div className="w-full h-full flex flex-col items-center justify-center">
