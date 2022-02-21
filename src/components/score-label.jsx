@@ -12,22 +12,22 @@ export default function ScoreLabel() {
       <img
         className="h-4 object-contain"
         src={S}
-        alt="p"
+        alt="s"
       />
       <img
         className="h-4 object-contain"
         src={C}
-        alt="l"
+        alt="c"
       />
       <img
         className="h-4 object-contain"
         src={O}
-        alt="a"
+        alt="o"
       />
       <img
         className="h-4 object-contain"
         src={R}
-        alt="y"
+        alt="r"
       />
       <img
         className="h-4 object-contain mr-1"
